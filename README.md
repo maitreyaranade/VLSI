@@ -3,7 +3,10 @@
 ## 1. Clock divider
 Please find ClockDivider folder including testbench and the module in SystemVerilog.
 
-## 2. SPI Master
+## 2. ALU with data_width
+Please find ClockDivider folder including testbench and the module in SystemVerilog. This ALU carries out 15 arithmetic and logic operations on the operands such as +. -, *, /, Logic gates, <<, >>, and comparison etc.
+
+## 3. SPI Master
  Please find SPIDriver-Master folder including waveform screenshot, testbench and the module in SystemVerilog. This module is used to implement a SPI master. The host transmits a certain number of SCLK pulses. This is placed in the n_clks port. It will always be less than or equal to SPI_MAXLEN.
  
 * **SPI bus timing :** SPI clock frequency is the host clock frequency divided by CLK_DIVIDE. CLK_DIVIDE value is guaranteed to be even and >= 4. SCLK has a 50% duty cycle. The slave will expect to clock in data on the rising edge of SCLK; therefore this module outputs new MOSI values on SCLK falling edges. Similarly, MISO input bits latch on the rising edges of SCLK.
