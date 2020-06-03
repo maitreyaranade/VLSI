@@ -1,12 +1,14 @@
 # My FPGA Projects 
 
-## 1. Clock divider
+## Verilog & SystemVerilog Projects:
+
+### 1. Clock divider
 Please find ClockDivider folder including testbench and the module in SystemVerilog.
 
-## 2. ALU with data_width
+### 2. ALU with data_width
 Please find ClockDivider folder including testbench and the module in SystemVerilog. This ALU carries out 15 arithmetic and logic operations on the operands such as +. -, *, /, Logic gates, <<, >>, and comparison etc.
 
-## 3. SPI Master
+### 3. SPI Master
  Please find SPIDriver-Master folder including waveform screenshot, testbench and the module in SystemVerilog. This module is used to implement a SPI master. The host transmits a certain number of SCLK pulses. This is placed in the n_clks port. It will always be less than or equal to SPI_MAXLEN.
  
 * **SPI bus timing :** SPI clock frequency is the host clock frequency divided by CLK_DIVIDE. CLK_DIVIDE value is guaranteed to be even and >= 4. SCLK has a 50% duty cycle. The slave will expect to clock in data on the rising edge of SCLK; therefore this module outputs new MOSI values on SCLK falling edges. Similarly, MISO input bits latch on the rising edges of SCLK.
@@ -17,4 +19,13 @@ Please find ClockDivider folder including testbench and the module in SystemVeri
   * When the host wants to issue a SPI transaction, the host holds the start_cmd pin high. While start_cmd is asserted, the host guarantees that n_clks and tx_data are valid and stable. This module acknowledges receipt of the command by issuing a transition on spi_drv_rdy from 1 to 0. This module then performs the SPI transaction on the SPI lines. This module indicates completion of the command by transitioning spi_drv_rdy from 0 to 1. rx_miso must contain valid data when this transition happens, and the data remains stable until the next command starts.
  
 
+## VHDL Projects:
 
+### 1. ALU
+### 2. Comparator
+### 3. DFlipFlopAsynch
+### 4. DFlipFlopSynch
+### 5. JKFlipFlopAsynch
+### 6. JKFlipFlopSynch
+### 7. JKSynchStuctural
+### 8. UpDownCounter
